@@ -6,14 +6,16 @@
 class JeMoe {
 
     constructor() {
-        this.joemoe();
+        this.jemoe();
     }
 
     jemoe() {
         let buttonAccept = document.querySelector(".a");
-        buttonAccept.addEventListener("click", () => {
-        buttonAccept.innerHTML = "bbb"
-        });
+        if (buttonAccept) {
+            buttonAccept.addEventListener("click", () => {
+                buttonAccept.innerHTML = "bbb"
+            });
+        }
     }
 }
 

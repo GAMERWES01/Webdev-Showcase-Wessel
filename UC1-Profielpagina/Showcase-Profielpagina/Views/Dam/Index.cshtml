@@ -1,0 +1,63 @@
+﻿<link rel="stylesheet" href="~/css/dam.css" asp-append-version="true" />
+<div class="container">
+@{
+    Layout = null;
+
+
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            if (i % 2 == 0)
+            {
+                if (j % 2 == 0)
+                {
+                    <button class="zwart">z</button>
+                }
+                else
+                {
+                    <button class="wit">w</button>
+                }
+            } 
+            else 
+            {
+                if (j % 2 == 1)
+                {
+                    <button class="zwart">z</button>
+                }
+                else
+                {
+                    <button class="wit">w</button>
+                }
+            }
+        }
+    }
+
+} 
+</div>
+
+
+<div>het ideee voor dit is het volgende:</div>
+<div>het is een dam spel</div>
+<div>je kan in het begin op de knop starten drukken dan ga je een dam wedstrijt doen</div>
+<div>je krijgt dan een code te zien wat je game code is (gekregen door api)</div>
+<div>elke beurt krijg je het bord van de api mee en print je hem uit via de frontend</div>
+<div>ik wil dat de front end laat zien welke moves er mogelijk zijn en dat die ook als enige kan uitgevoert kan worden</div>
+<div>de backend (waarschijnlijk een api ofzo) controleert of de move mogelijk is die gestuurt is door de fornt end (controleren omdat er gerommelt kan worden met de fornt end)</div>
+<div>als de move is goedgekeurt update het bord in de forntend en zie je waarzijnlijk een animatie welke beurt er is gedaan.</div>
+<div>extra idee:</div>
+<div>1. er kunnen vorige moves bekeken worden (weet niet of dit in de fornt end moet gedaan worden of in de backend)</div>
+<div>2. eigen bord in richten (enige beperking is dat het bord rechthoekkig moet zijn)</div>
+<div>3. best move berekenen (mischien met een externe api)</div>
+
+
+
+
+
+
+
+
+
+
+
+
