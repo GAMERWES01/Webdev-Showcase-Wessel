@@ -68,14 +68,13 @@
     font-size: 14px;
 }
 
+
 @media only screen and (min-width: 800px) {
+
+
 
     .page {
         flex-direction: row;
-    }
-
-    .person-name {
-        order: -1;
     }
 
     .profile-content__category--hidden-mobile {

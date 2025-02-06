@@ -2,3 +2,20 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+class JeMoe {
+
+    constructor() {
+        this.joemoe();
+    }
+
+    jemoe() {
+        let buttonAccept = document.querySelector(".a");
+        buttonAccept.addEventListener("click", () => {
+        buttonAccept.innerHTML = "bbb"
+        });
+    }
+}
+
+const jemoe = new JeMoe();
+
