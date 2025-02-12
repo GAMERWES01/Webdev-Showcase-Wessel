@@ -1,21 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Showcase_Profielpagina.Models;
 using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 namespace Showcase_Profielpagina.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly HttpClient _httpClient;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IHttpClientFactory httpClientFactory)
         {
             _logger = logger;
+
+            _httpClient = httpClientFactory.CreateClient();
+            _httpClient.BaseAddress = new Uri("https://localhost:7101");
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            try
+            {
+                string responseContent = await _httpClient.GetStringAsync("/Students");
+
+                return View(JsonConvert.DeserializeObject<List<string>>(responseContent));
+            }
+            catch (HttpRequestException ex)
+            {
+                ViewBag.ErrorMessage = "verbinden met api is niet gelukt";
+            }
+            return View(new List<string>());
         }
 
         public IActionResult Privacy()
