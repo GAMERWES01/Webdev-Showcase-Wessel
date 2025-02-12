@@ -23,6 +23,20 @@
     box-sizing: border-box; 
 }
 
+.containertest {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.box {
+    border: 3px solid #666;
+    background-color: #ddd;
+    border-radius: .5em;
+    padding: 10px;
+    cursor: move;
+}
+
 @media (max-height: 100vh) and (min-width: 100vw) {
     .container {
         display: grid;

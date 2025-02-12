@@ -1,4 +1,4 @@
-﻿<link rel="stylesheet" href="~/css/dam.css" asp-append-version="true" />
+﻿
 <div class="container">
 @{
     Layout = null;
@@ -36,7 +36,11 @@
 } 
 </div>
 
-
+<div class="containertest">
+    <div draggable="true" class="box">A</div>
+    <div draggable="true" class="box">B</div>
+    <div draggable="true" class="box">C</div>
+</div>
 <div>het ideee voor dit is het volgende:</div>
 <div>het is een dam spel</div>
 <div>je kan in het begin op de knop starten drukken dan ga je een dam wedstrijt doen</div>
@@ -50,7 +54,13 @@
 <div>2. eigen bord in richten (enige beperking is dat het bord rechthoekkig moet zijn)</div>
 <div>3. best move berekenen (mischien met een externe api)</div>
 
+<div id="myDIV" style="padding:16px;background-color:lightgray">
+    <h3>A DIV element</h3>
+</div>
 
+
+<link rel="stylesheet" href="~/css/dam.css" asp-append-version="true" />
+<script src="~/js/dam.js" asp-append-version="true"></script>
 
 
 
