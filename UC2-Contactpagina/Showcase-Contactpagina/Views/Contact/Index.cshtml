@@ -22,12 +22,22 @@
 
             <div class="form-contactpagina__inputelement fx-col">
                 <label for="email">E-mailadres: </label>
-                <input type="email" asp-for="Email" name="email" id="email">
+                <input type="email" asp-for="Email" name="email" id="email" required>
             </div>
 
             <div class="form-contactpagina__inputelement fx-col">
                 <label for="phone">Telefoonnummer: </label>
-                <input type="tel" asp-for="Phone" name="phone" id="phone">
+                <input type="tel" asp-for="Phone" name="phone" id="phone" required>
+            </div>
+            
+            <div class="form-contactpagina__inputelement fx-col">
+                <label for="phone">Onderwerp: </label>
+                <input type="text" asp-for="Topic" name="topic" id="topic" required>
+            </div>
+            
+            <div class="form-contactpagina__inputelement fx-col">
+                <label for="phone">Bericht: </label>
+                <input type="text" asp-for="Message" name="message" id="message" required>
             </div>
 
             <div class="form-contactpagina__inputelement">
