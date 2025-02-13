@@ -1,9 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
+@model List<string>
+<h1>@ViewBag.ErrorMessage</h1>
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
 <button class="a">aaa</button>
+
+
+
+
+@foreach (string item in Model)
+{
+    <div>@item</div>
+}
 
 

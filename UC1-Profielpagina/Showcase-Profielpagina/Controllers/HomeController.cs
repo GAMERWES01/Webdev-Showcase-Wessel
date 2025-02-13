@@ -19,7 +19,12 @@ namespace Showcase_Profielpagina.Controllers
             _httpClient.BaseAddress = new Uri("https://localhost:7101");
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Privacy()
         {
             try
             {
@@ -32,11 +37,6 @@ namespace Showcase_Profielpagina.Controllers
                 ViewBag.ErrorMessage = "verbinden met api is niet gelukt";
             }
             return View(new List<string>());
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

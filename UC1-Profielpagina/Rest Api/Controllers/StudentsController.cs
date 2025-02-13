@@ -14,15 +14,6 @@ namespace Rest_Api.Controllers
             "Rosalie"
         };
 
-
-
-        //private readonly ILogger<StudentsController> _logger;
-
-        //public StudentsController(ILogger<StudentsController> logger)
-        //{
-        //    _logger = logger;
-        //}
-
         [HttpGet(Name = "GetStudents")]
         public List<string> Get()
         {
@@ -31,7 +22,7 @@ namespace Rest_Api.Controllers
         [HttpPost(Name = "GetStudents")]
         public void Post(string name)
         {
-            if (_students.Contains(name))
+            if (!_students.Contains(name))
             {
                 _students.Add(name);
             } 
